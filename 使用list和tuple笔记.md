@@ -84,3 +84,8 @@ tuple：
 >>> classmates = ('Michael', 'Bob', 'Tracy')
 现在，classmates这个tuple不能变了，它也没有append()，insert()这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用classmates[0]，classmates[-1]，但不能赋值成另外的元素。
 
+【tuple的陷阱】：当定义一个只有一个元素的tuple，要在括号里面写完元素后加上一个逗号，如：
+>>> t = (1,)
+>>> t
+(1,)
+这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。

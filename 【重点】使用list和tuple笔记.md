@@ -13,6 +13,8 @@ list.pop()：删除list中最后一个元素
 list.pop(x)：删除list中索引号为x的元素
 list[x]='...'：把索引号为x的元素替换成...
 list中的元素可以为一个新的list
+【补充】list.pop()理解成在栈中推出最后（最顶）的那个数据，所以list.pop()会返回最顶部的数据
+       可以用a=list.pop()去取那个数据
 
 >>> classmates = ['Michael', 'Bob', 'Tracy']
 >>> classmates

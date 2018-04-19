@@ -13,8 +13,93 @@ list.pop()：删除list中最后一个元素
 list.pop(x)：删除list中索引号为x的元素
 list[x]='...'：把索引号为x的元素替换成...
 list中的元素可以为一个新的list
-【补充】list.pop()理解成在栈中推出最后（最顶）的那个数据，所以list.pop()会返回最顶部的数据
+【补充1】list.pop()理解成在栈中推出最后（最顶）的那个数据，所以list.pop()会返回最顶部的数据
        可以用a=list.pop()去取那个数据
+       
+【重点用法2】
+Python列表函数&方法
+Python包含以下函数:
+序号	函数
+1	cmp(list1, list2)
+比较两个列表的元素
+2	len(list)
+列表元素个数
+3	max(list)
+返回列表元素最大值
+4	min(list)
+返回列表元素最小值
+5	list(seq)
+将元组转换为列表
+Python包含以下方法:
+序号	方法
+1	list.append(obj)
+在列表末尾添加新的对象
+2	list.count(obj)
+【统计】某个元素在列表中出现的【次数】
+3	list.extend(seq)
+在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）
+4	list.index(obj)
+从列表中找出某个值第一个匹配项的索引位置
+5	list.insert(index, obj)
+将对象插入列表
+6	list.pop(obj=list[-1])
+移除列表中的一个元素（默认最后一个元素），并且返回该元素的值
+7	list.remove(obj)
+移除列表中某个值的第一个匹配项
+8	list.reverse()
+反向列表中元素
+9	list.sort([func])
+对原列表进行排序
+
+元组索引，截取【这里而是用的中括号 注意！！！截取的时候不要用小括号】
+因为元组也是一个序列，所以我们可以访问元组中的指定位置的元素，也可以截取索引中的一段元素，如下所示：
+元组：
+L = ('spam', 'Spam', 'SPAM!')
+Python 表达式	结果	描述
+L[2]	'SPAM!'	读取第三个元素
+L[-2]	'Spam'	反向读取；读取倒数第二个元素
+L[1:]	('Spam', 'SPAM!')	截取元素
+       
+【补充2】删除列表元素
+可以使用 del 语句来删除列表的元素，如下实例：
+list1 = ['physics', 'chemistry', 1997, 2000]
+print list1
+del list1[2]
+print "After deleting value at index 2 : "
+print list1
+以上实例输出结果：
+['physics', 'chemistry', 1997, 2000]
+After deleting value at index 2 :
+['physics', 'chemistry', 2000]
+
+【补充3】Python列表脚本操作符
+Python 表达式	                   结果	描述
+len([1, 2, 3])	                  3	长度
+[1, 2, 3] + [4, 5, 6]	         [1, 2, 3, 4, 5, 6]	组合
+['Hi!'] * 4	                   ['Hi!', 'Hi!', 'Hi!', 'Hi!']	重复
+3 in [1, 2, 3]	                True	元素是否存在于列表中
+for x in [1, 2, 3]: print x    	1 2 3	迭代
+
+【补充4】Python列表截取
+Python 表达式   描述
+L[2]	     读取列表中第三个元素
+L[-2]	   	读取列表中倒数第二个元素
+L[1:]	    从第二个元素开始截取列表
+
+【补充5】Python List list()方法
+list() 方法用于将元组转换为列表。
+注：元组与列表是非常类似的，区别在于元组的元素值不能修改，元组（tuple）是放在括号中，列表（list）是放于方括号中。
+语法
+list()方法语法：
+list( tup )
+【实例】
+aTuple = (123, 'xyz', 'zara', 'abc');
+aList = list(aTuple)
+print "列表元素 : ", aList
+以上实例输出结果如下：
+列表元素 :  [123, 'xyz', 'zara', 'abc']
+
+
 
 >>> classmates = ['Michael', 'Bob', 'Tracy']
 >>> classmates
